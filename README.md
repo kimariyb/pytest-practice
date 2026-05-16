@@ -52,3 +52,61 @@
 ### 标记
 
 实现筛选或者增强
+
+- 用户标记：只能实现筛选
+    1. 注册：在配置文件中注册
+    2. 标记：通过 `@pytest.mark.xxx` 装饰器标记
+    3. 筛选：命令行参数筛选
+- 内置标记：
+    1. skip：无条件跳过
+    2. skipf：有条件跳过
+    3. xfail：预期失败
+    4. parametrize：参数化测试（数据驱动测试）
+    5. usefixture：使用 fixture
+
+## Chapter 03
+
+
+### 核心功能
+
+1. 前后置操作
+
+2. 内容注入
+
+### 创建 fixture
+
+1. 创建函数
+
+2. 添加 `@pytest.fixture` 装饰器
+
+3. 添加 `yield` 关键词
+
+### 使用 fixture
+
+1. 必须使用用例进行调用 fixture
+
+2. 通过标记或参数请求 fixture
+
+3. 不允许直接调用 fixture
+
+> Error 是 fixture 中报错，而 Failure 是用例中报错
+
+### fixture 的共享范围
+
+1. function：一个用例共享，默认级别
+
+2. class：一个类共享
+
+3. module：一个模块共享
+
+4. package：一个包共享
+
+5. session：一个测试会话共享，全局共享
+
+6. conftest：跨文件共享，只会向上寻找，通过下级目录可以实现 fixture 注入
+
+> fixture 具有面向对象特性
+
+### 内容注入
+
+通过 yield 返回，每个用例只能注入 1 次。
