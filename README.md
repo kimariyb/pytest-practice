@@ -110,3 +110,23 @@
 ### 内容注入
 
 通过 yield 返回，每个用例只能注入 1 次。
+
+
+## chapter 04
+
+常见框架
+
+- `pytest-html`：HTML 测试报告
+- `pytest-xdist`：分布式执行用例
+- `pytest-order`：控制用例执行顺序
+- `pytest-rerunfailures`：用例失败后重跑
+- `pytest-result-log`：在日志中记录用例结果
+- `allure-pytest`：生成 allure 结果文件
+
+
+## chapter 05
+
+
+
+
+
